@@ -9,13 +9,13 @@ local function table_matches(t1, t2)
 	if type1 ~= 'table' and type2 ~= 'table' then return t1 == t2 end
 
 	for k1,v1 in pairs(t1) do
-	   local v2 = t2[k1]
-	   if v2 == nil or not table_matches(v1,v2) then return false end
+	    local v2 = t2[k1]
+	    if v2 == nil or not table_matches(v1,v2) then return false end
 	end
 
 	for k2,v2 in pairs(t2) do
-	   local v1 = t1[k2]
-	   if v1 == nil or not table_matches(v1,v2) then return false end
+	    local v1 = t1[k2]
+	    if v1 == nil or not table_matches(v1,v2) then return false end
 	end
 	return true
 end
